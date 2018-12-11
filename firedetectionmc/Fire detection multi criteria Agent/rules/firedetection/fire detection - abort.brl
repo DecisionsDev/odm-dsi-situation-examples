@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - abort</name>
+  <uuid>2c66a26c-62b8-4547-8f2e-a6e2523d4c58</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'the detection' to a fire detection ;	
+if there is at least one fire	
+then
+	abort 'the detection';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

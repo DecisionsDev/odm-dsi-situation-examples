@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - smoke</name>
+  <uuid>b1b5dce1-4397-4112-bdc0-27e6a625ac8f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a smoke event occurs
+definitions
+	set 'the detection' to a fire detection where this fire detection is ongoing ;
+then
+	add smoke to the criterias of 'the detection';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

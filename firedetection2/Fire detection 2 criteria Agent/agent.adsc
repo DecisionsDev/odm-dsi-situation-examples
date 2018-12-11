@@ -1,0 +1,4 @@
+'Fire_detection_2_criteria_Agent' is an agent related to a room  , 
+processing events :
+- room event , where this room comes from the room number of this room event, with a horizon of 0 seconds
+

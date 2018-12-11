@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - heat</name>
+  <uuid>9af590e5-b5f7-47a1-af3d-af99b573ed8a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a heat event occurs
+definitions
+	set 'the detection' to a fire detection where this fire detection is ongoing ;
+then
+	add heat to the criterias of 'the detection';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

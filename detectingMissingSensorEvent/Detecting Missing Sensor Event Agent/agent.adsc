@@ -1,0 +1,4 @@
+'Missing_Event_Detection' is an agent related to an user  , 
+processing events :
+- stop sensor event, where this user comes from the user of this stop sensor event , with a horizon of 0 second
+- sensor heartbeat  , where this user comes from the user of this sensor heartbeat , with a horizon of 0 second

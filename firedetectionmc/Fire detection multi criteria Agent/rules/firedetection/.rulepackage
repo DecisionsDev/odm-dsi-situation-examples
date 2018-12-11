@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>firedetection</name>
+  <uuid>84c5c675-955a-4e0c-8c9f-0660866c485d</uuid>
+</ilog.rules.studio.model.base:RulePackage>

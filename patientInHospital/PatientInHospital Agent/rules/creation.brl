@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>creation</name>
+  <uuid>030ca1b6-05e7-4faf-b7b2-7bb54b590d80</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient creation event occurs 
+then set 'the patient' to a new patient where 
+	the ssn is the ssn of this patient creation event ,
+	the name is the name of this patient creation event ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

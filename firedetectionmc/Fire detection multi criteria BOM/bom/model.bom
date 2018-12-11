@@ -1,0 +1,306 @@
+property uuid "871e5bb9-d74c-4274-9404-4e48406deee2"
+property bdl_generated "true"
+package firedetection.mc;
+
+
+public class CarbonDioxydeEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "CarbonDioxydeEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public int partsPerMillion
+                property "xsd.name" "partsPerMillion"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public CarbonDioxydeEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public CarbonDioxydeEvent(int partsPerMillion, string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class CarbonMonoxydeEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "CarbonMonoxydeEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public int partsPerMillion
+                property "xsd.name" "partsPerMillion"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public CarbonMonoxydeEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public CarbonMonoxydeEvent(int partsPerMillion, string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Criteria
+        property "de.generated" "true"
+        property "ia.enum" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    domain {static heat, static heat_increase, static flame, static smoke, static CO, static CO2}
+    public static final readonly firedetection.mc.Criteria CO
+                property "xsd.name" "CO"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public static final readonly firedetection.mc.Criteria CO2
+                property "xsd.name" "CO2"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public static final readonly firedetection.mc.Criteria flame
+                property "xsd.name" "flame"
+                property "xsd.optional" "true"
+                property "xsd.order" "2";
+    public static final readonly firedetection.mc.Criteria heat
+                property "xsd.name" "heat"
+                property "xsd.optional" "true"
+                property "xsd.order" "3";
+    public static final readonly firedetection.mc.Criteria heat_increase
+                property "xsd.name" "heat_increase"
+                property "xsd.optional" "true"
+                property "xsd.order" "4";
+    public static final readonly firedetection.mc.Criteria smoke
+                property "xsd.name" "smoke"
+                property "xsd.optional" "true"
+                property "xsd.order" "5";
+}
+
+public class DirectDetectionEvent
+        extends firedetection.mc.RoomEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "DirectDetectionEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public DirectDetectionEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public DirectDetectionEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Fire
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public java.util.Set criterias domain 0,* class firedetection.mc.Criteria
+                property update "true";
+    public Fire(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public Fire(java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+    public void addTo_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias"
+                property update "true";
+    public void clear_criterias()
+                property collectionAttribute "criterias"
+                property update "true";
+    public void removeFrom_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias"
+                property update "true";
+    public void set_criterias(java.util.Collection arg0 domain 0,* class firedetection.mc.Criteria)
+                property collectionAttribute "criterias"
+                property update "true";
+}
+
+public class FireDetection
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public java.util.Set criterias domain 0,* class firedetection.mc.Criteria
+                property update "true";
+    public FireDetection(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public FireDetection(java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+    public void addTo_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias"
+                property update "true";
+    public void clear_criterias()
+                property collectionAttribute "criterias"
+                property update "true";
+    public void removeFrom_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias"
+                property update "true";
+    public void set_criterias(java.util.Collection arg0 domain 0,* class firedetection.mc.Criteria)
+                property collectionAttribute "criterias"
+                property update "true";
+}
+
+public class FireEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "FireEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public java.util.Set criterias domain 0,* class firedetection.mc.Criteria
+                property "xsd.collection" "firedetection.mc.Criteria"
+                property "xsd.name" "criteria"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string roomNumber
+                property "xsd.name" "roomNumber"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public FireEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public FireEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+    public void addTo_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias";
+    public void clear_criterias()
+                property collectionAttribute "criterias";
+    public void removeFrom_criterias(firedetection.mc.Criteria arg0)
+                property collectionAttribute "criterias";
+    public void set_criterias(java.util.Collection arg0 domain 0,* class firedetection.mc.Criteria)
+                property collectionAttribute "criterias";
+}
+
+public class FlameEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "FlameEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public FlameEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public FlameEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class HeatEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "HeatEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public HeatEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public HeatEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RORHeatEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "RORHeatEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public RORHeatEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public RORHeatEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Room
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string number
+                property "ia.entity.id" "true"
+                property update "true";
+    public Room(string number)
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RoomEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "RoomEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public string roomNumber
+                property "xsd.name" "roomNumber"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public RoomEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public RoomEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class SmokeEvent
+        extends firedetection.mc.DirectDetectionEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "SmokeEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public SmokeEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public SmokeEvent(string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class TemperatureEvent
+        extends firedetection.mc.RoomEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "TemperatureEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Fire%20detection%20multi%20criteria%20BOM/model"
+{
+    public int temperature
+                property "xsd.name" "temperature"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public TemperatureEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public TemperatureEvent(int temperature, string roomNumber, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+

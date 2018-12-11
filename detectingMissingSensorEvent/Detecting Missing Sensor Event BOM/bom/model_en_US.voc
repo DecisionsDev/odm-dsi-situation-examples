@@ -1,0 +1,62 @@
+uuid = abfebf02-4b37-42a8-906e-1f09c09aa3f7
+# com.acme.missing.AbsenceOfSensorEvent
+com.acme.missing.AbsenceOfSensorEvent#concept.label = absence of sensor event
+com.acme.missing.AbsenceOfSensorEvent.AbsenceOfSensorEvent(java.lang.String,java.time.ZonedDateTime,com.acme.missing.User)#phrase.navigation = a new {absence of sensor event} where {0, message} {1, timestamp} {2, user} 
+com.acme.missing.AbsenceOfSensorEvent.message#phrase.action = set the message of {this} to {message}
+com.acme.missing.AbsenceOfSensorEvent.message#phrase.navigation = {message} of {this}
+com.acme.missing.AbsenceOfSensorEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.missing.AbsenceOfSensorEvent.timestamp#phrase.navigation = {timestamp} of {this}
+com.acme.missing.AbsenceOfSensorEvent.user#phrase.action = set the user of {this} to {user}
+com.acme.missing.AbsenceOfSensorEvent.user#phrase.clearer = clear the user of {this}
+com.acme.missing.AbsenceOfSensorEvent.user#phrase.navigation = {user} of {this}
+
+# com.acme.missing.BrokenSensor
+com.acme.missing.BrokenSensor#concept.label = broken sensor
+com.acme.missing.BrokenSensor.BrokenSensor(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {broken sensor} where {0, beginning date} {1, end date} 
+
+# com.acme.missing.BrokenSensorEvent
+com.acme.missing.BrokenSensorEvent#concept.label = broken sensor event
+com.acme.missing.BrokenSensorEvent.BrokenSensorEvent(java.lang.String,java.time.ZonedDateTime,com.acme.missing.User)#phrase.navigation = a new {broken sensor event} where {0, message} {1, timestamp} {2, user} 
+com.acme.missing.BrokenSensorEvent.message#phrase.action = set the message of {this} to {message}
+com.acme.missing.BrokenSensorEvent.message#phrase.navigation = {message} of {this}
+com.acme.missing.BrokenSensorEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.missing.BrokenSensorEvent.timestamp#phrase.navigation = {timestamp} of {this}
+com.acme.missing.BrokenSensorEvent.user#phrase.action = set the user of {this} to {user}
+com.acme.missing.BrokenSensorEvent.user#phrase.clearer = clear the user of {this}
+com.acme.missing.BrokenSensorEvent.user#phrase.navigation = {user} of {this}
+
+# com.acme.missing.MissingSensorEventDetection
+com.acme.missing.MissingSensorEventDetection#concept.label = missing sensor event detection
+com.acme.missing.MissingSensorEventDetection.MissingSensorEventDetection(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {missing sensor event detection} where {0, beginning date} {1, end date} 
+
+# com.acme.missing.SensorHeartbeat
+com.acme.missing.SensorHeartbeat#concept.label = sensor heartbeat
+com.acme.missing.SensorHeartbeat.SensorHeartbeat(java.time.ZonedDateTime,com.acme.missing.User)#phrase.navigation = a new {sensor heartbeat} where {0, timestamp} {1, user} 
+com.acme.missing.SensorHeartbeat.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.missing.SensorHeartbeat.timestamp#phrase.navigation = {timestamp} of {this}
+com.acme.missing.SensorHeartbeat.user#phrase.action = set the user of {this} to {user}
+com.acme.missing.SensorHeartbeat.user#phrase.clearer = clear the user of {this}
+com.acme.missing.SensorHeartbeat.user#phrase.navigation = {user} of {this}
+
+# com.acme.missing.StopSensorEvent
+com.acme.missing.StopSensorEvent#concept.label = stop sensor event
+com.acme.missing.StopSensorEvent.StopSensorEvent(java.time.ZonedDateTime,com.acme.missing.User)#phrase.navigation = a new {stop sensor event} where {0, timestamp} {1, user} 
+com.acme.missing.StopSensorEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.missing.StopSensorEvent.timestamp#phrase.navigation = {timestamp} of {this}
+com.acme.missing.StopSensorEvent.user#phrase.action = set the user of {this} to {user}
+com.acme.missing.StopSensorEvent.user#phrase.clearer = clear the user of {this}
+com.acme.missing.StopSensorEvent.user#phrase.navigation = {user} of {this}
+
+# com.acme.missing.User
+com.acme.missing.User#concept.label = user
+com.acme.missing.User.User(java.lang.String)#phrase.navigation = a new {user} where {0, email} 
+com.acme.missing.User.email#phrase.navigation = {email} of {this}
+
+# com.acme.missing.UserInit
+com.acme.missing.UserInit#concept.label = user init
+com.acme.missing.UserInit.UserInit(java.time.ZonedDateTime,com.acme.missing.User)#phrase.navigation = a new {user init} where {0, timestamp} {1, user} 
+com.acme.missing.UserInit.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.missing.UserInit.timestamp#phrase.navigation = {timestamp} of {this}
+com.acme.missing.UserInit.user#phrase.action = set the user of {this} to {user}
+com.acme.missing.UserInit.user#phrase.clearer = clear the user of {this}
+com.acme.missing.UserInit.user#phrase.navigation = {user} of {this}

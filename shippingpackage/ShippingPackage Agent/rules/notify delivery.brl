@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>notify delivery</name>
+  <uuid>c0d89d83-e4ba-4925-813d-d158775c31cd</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'shipping' to a shipping package 
+	where this shipping package is ending
+	and the status of this shipping package is delivered;
+then 
+	emit a new outgoing package delivery event where 
+	the id is the id of 'the package' ,
+	the duration is the duration between the beginning date of shipping and now;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

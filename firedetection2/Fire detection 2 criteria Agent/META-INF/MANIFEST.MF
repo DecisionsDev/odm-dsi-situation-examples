@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: Fire_Detection_2_criteria.Fire_detection_2_criter
+ ia_Agent
+Bundle-Version: 0.0.0
+

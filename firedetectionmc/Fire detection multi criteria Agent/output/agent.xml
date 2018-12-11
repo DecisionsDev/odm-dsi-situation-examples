@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><agent xmlns="http://www.ibm.com/ia/AgentDescriptor">
+  <name>Fire_detection_multi_criteria_Agent</name>
+  <kind>Rule</kind>
+  <entity>firedetection.mc.Room</entity>
+  <events>
+    <event>
+      <type>firedetection.mc.RoomEvent</type>
+      <mapping>{0}.roomNumber</mapping>
+      <horizon>PT0S</horizon>
+    </event>
+  </events>
+</agent>

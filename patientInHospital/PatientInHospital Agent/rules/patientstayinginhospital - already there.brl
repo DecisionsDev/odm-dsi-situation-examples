@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>patientstayinginhospital - already there</name>
+  <uuid>bde56503-bca9-485c-90d8-29c64fc8afff</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient admission occurs 
+if there is at least one patient staying in hospital
+	where this patient staying in hospital is ongoing 
+	and now is after the beginning date of this patient staying in hospital,
+then
+  print "Received a patient admission for a patient already in hospital";]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

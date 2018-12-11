@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>NotifyAbsence</name>
+  <uuid>a3ac144b-c2ec-4775-ac55-f29c57b0ca9f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set 'detection' to a missing sensor event detection 
+	where this missing sensor event detection is ending;
+then
+	emit a new absence of sensor event where 
+	the user is 'the user' ,
+	the message is "no sensor event in the last day before " + the end date of detection ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

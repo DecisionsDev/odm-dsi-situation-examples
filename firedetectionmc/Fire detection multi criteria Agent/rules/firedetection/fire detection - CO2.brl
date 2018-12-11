@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - CO2</name>
+  <uuid>88342848-213d-4ce7-8d1c-0b6771a1edb1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a carbon dioxyde event occurs
+definitions
+	set 'the detection' to a fire detection where this fire detection is ongoing ;
+then
+	add CO2 to the criterias of 'the detection';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

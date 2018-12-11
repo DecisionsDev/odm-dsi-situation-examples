@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>missing</name>
+  <uuid>1c043dc5-06a4-47c6-97da-38d355124b20</uuid>
+</ilog.rules.studio.model.base:RulePackage>

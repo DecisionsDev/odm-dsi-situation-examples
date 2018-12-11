@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion planned - cancel</name>
+  <uuid>27d7a05d-ca4d-42f4-90ee-477914d36595</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a cancel promotion occurs 
+definitions
+    set 'promotion planned' to a promotion planned
+    where the region of this promotion planned is the region of this cancel promotion;
+then
+    abort 'promotion planned';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

@@ -1,0 +1,62 @@
+uuid = 577bddd1-cacb-45d6-9cb1-70642130ba00
+# shipping.DeliveryStatus
+shipping.DeliveryStatus#concept.label = delivery status
+shipping.DeliveryStatus.delivered#instance.label = delivered
+shipping.DeliveryStatus.ongoing#instance.label = ongoing
+
+# shipping.OutgoingPackageDeliveryEvent
+shipping.OutgoingPackageDeliveryEvent#concept.label = outgoing package delivery event
+shipping.OutgoingPackageDeliveryEvent.OutgoingPackageDeliveryEvent(java.time.Duration,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {outgoing package delivery event} where {0, duration} {1, id} {2, timestamp} 
+shipping.OutgoingPackageDeliveryEvent.duration#phrase.action = set the duration of {this} to {duration}
+shipping.OutgoingPackageDeliveryEvent.duration#phrase.navigation = {duration} of {this}
+shipping.OutgoingPackageDeliveryEvent.id#phrase.action = set the id of {this} to {id}
+shipping.OutgoingPackageDeliveryEvent.id#phrase.navigation = {id} of {this}
+shipping.OutgoingPackageDeliveryEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+shipping.OutgoingPackageDeliveryEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# shipping.Package
+shipping.Package#concept.label = package
+shipping.Package.Package(java.lang.String)#phrase.navigation = a new {package} where {0, id} 
+shipping.Package.id#phrase.navigation = {id} of {this}
+
+# shipping.PackageDelivered
+shipping.PackageDelivered#concept.label = package delivered
+shipping.PackageDelivered.PackageDelivered(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {package delivered} where {0, id} {1, timestamp} 
+shipping.PackageDelivered.id#phrase.action = set the id of {this} to {id}
+shipping.PackageDelivered.id#phrase.navigation = {id} of {this}
+shipping.PackageDelivered.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+shipping.PackageDelivered.timestamp#phrase.navigation = {timestamp} of {this}
+
+# shipping.PackageMove
+shipping.PackageMove#concept.label = package move
+shipping.PackageMove.PackageMove(java.lang.String,com.ibm.geolib.geom.Point,java.time.ZonedDateTime)#phrase.navigation = a new {package move} where {0, id} {1, location} {2, timestamp} 
+shipping.PackageMove.id#phrase.action = set the id of {this} to {id}
+shipping.PackageMove.id#phrase.navigation = {id} of {this}
+shipping.PackageMove.location#phrase.action = set the location of {this} to {location}
+shipping.PackageMove.location#phrase.clearer = clear the location of {this}
+shipping.PackageMove.location#phrase.navigation = {location} of {this}
+shipping.PackageMove.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+shipping.PackageMove.timestamp#phrase.navigation = {timestamp} of {this}
+
+# shipping.ShippingPackage
+shipping.ShippingPackage#concept.label = shipping package
+shipping.ShippingPackage.ShippingPackage(com.ibm.geolib.geom.Point,shipping.DeliveryStatus,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {shipping package} where {0, location} {1, status} {2, beginning date} {3, end date} 
+shipping.ShippingPackage.location#phrase.action = set the location of {this} to {location}
+shipping.ShippingPackage.location#phrase.clearer = clear the location of {this}
+shipping.ShippingPackage.location#phrase.navigation = {location} of {this}
+shipping.ShippingPackage.status#phrase.action = set the status of {this} to {status}
+shipping.ShippingPackage.status#phrase.clearer = clear the status of {this}
+shipping.ShippingPackage.status#phrase.navigation = {status} of {this}
+
+# shipping.TimeoutShipment
+shipping.TimeoutShipment#concept.label = timeout shipment
+shipping.TimeoutShipment.TimeoutShipment(java.time.Duration,java.lang.String,com.ibm.geolib.geom.Point,java.time.ZonedDateTime)#phrase.navigation = a new {timeout shipment} where {0, duration} {1, id} {2, location} {3, timestamp} 
+shipping.TimeoutShipment.duration#phrase.action = set the duration of {this} to {duration}
+shipping.TimeoutShipment.duration#phrase.navigation = {duration} of {this}
+shipping.TimeoutShipment.id#phrase.action = set the id of {this} to {id}
+shipping.TimeoutShipment.id#phrase.navigation = {id} of {this}
+shipping.TimeoutShipment.location#phrase.action = set the location of {this} to {location}
+shipping.TimeoutShipment.location#phrase.clearer = clear the location of {this}
+shipping.TimeoutShipment.location#phrase.navigation = {location} of {this}
+shipping.TimeoutShipment.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+shipping.TimeoutShipment.timestamp#phrase.navigation = {timestamp} of {this}

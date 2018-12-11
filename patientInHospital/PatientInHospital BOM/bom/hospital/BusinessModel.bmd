@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a patient is a business entity identified by a ssn.
+a patient has a name.
+
+a patient staying in hospital is a business situation.
+
+a patient creation event is a business event.
+a patient creation event has a ssn , a name.
+
+a patient admission is a business event.
+a patient admission has a ssn.
+
+a patient release is a business event.
+a patient release has a ssn.
+
+a daily notification is a business event.
+a daily notification has a ssn.
+
+a business situation is a business event.]]></Bmd>
+</BusinessModelDefinition>

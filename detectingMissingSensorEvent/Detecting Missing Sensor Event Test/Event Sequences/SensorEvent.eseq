@@ -1,0 +1,9 @@
+define 'the user' as the user identified by "Toto";
+
+emit a new user init where 
+	the user is the user identified by "Toto",
+	time-stamped 4/10/2018 11:00:00 AM +0200 ;
+
+	
+emit a new sensor heartbeat where the user is 'the user',
+ time-stamped 2 seconds later ;  

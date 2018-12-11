@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>BeginDetection</name>
+  <uuid>e960d818-8a33-4547-b695-3a3e04d19bb0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a sensor heartbeat occurs 
+if there is no missing sensor event detection 
+	where this missing sensor event detection is ongoing,
+then
+identify a new missing sensor event detection where 
+	the beginning date is now,
+	the end date is 1 days after now;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

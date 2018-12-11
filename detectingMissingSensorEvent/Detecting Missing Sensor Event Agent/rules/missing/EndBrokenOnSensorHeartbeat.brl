@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>EndBrokenOnSensorHeartbeat</name>
+  <uuid>76c4634c-64b7-47e9-bf32-4dbf8b380595</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a sensor heartbeat occurs 
+definitions 
+	set 'broken sensor' to a broken sensor  
+	where this broken sensor is ongoing ;
+then
+	end 'broken sensor'  ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

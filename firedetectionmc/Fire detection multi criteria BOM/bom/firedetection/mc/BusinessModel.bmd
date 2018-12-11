@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a room is a business entity identified by a number.
+
+a room event is a business event with a room number (text).
+
+a direct detection event is a room event.
+
+a temperature event is a room event with a temperature (integer ).
+
+a flame event is a direct detection event.
+
+a ROR heat event is a direct detection event. -- rate of rise detection
+
+a heat event is a direct detection event.
+
+a smoke event is a direct detection event.
+
+a carbon monoxyde event is a direct detection event with a parts per million (integer).
+
+a carbon dioxyde event is a direct detection event with a parts per million (integer).
+
+a criteria can be one of : 
+  heat, heat increase, flame, smoke, CO, CO2.
+	 
+a fire detection is a business situation.
+a fire detection has several different criterias.
+
+a fire is a business situation.
+a fire has several different criterias.
+
+a fire event is a business event with a room number ( text ).
+a fire event has several different criterias.
+]]></Bmd>
+    <Bmi><![CDATA[a room is initialized from a room event , where this room comes from the room number of this room event . ]]></Bmi>
+</BusinessModelDefinition>

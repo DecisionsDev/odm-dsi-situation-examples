@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion in near future - init from late notification</name>
+  <uuid>f767b7cf-5a00-4436-a170-d9c39f6e53d0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a new promotion occurs
+if
+    there is no promotion in near future
+    where this promotion in near future is ongoing
+    and the region of this promotion in near future is the region of this new promotion ,
+    and now is after or the same as 10 days before the start date of this new promotion 
+    and now is before the start date of this new promotion 
+then identify a new promotion in near future where
+   the beginning date is 10 days before the start date of this new promotion,
+   the end date is the start date of this new promotion,
+    the promotion end date is the end date of this new promotion ,
+    the region is the region of this new promotion;
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

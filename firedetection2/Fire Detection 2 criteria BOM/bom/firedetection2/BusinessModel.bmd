@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a room is a business entity identified by a number.
+
+a room event is a business event with a room number (text).
+
+a temperature event is a room event with a temperature (integer ).
+
+a smoke event is a room event.
+
+a fire event is a business event with a room number ( text ).
+
+a fire detection is a business situation.
+a fire detection has a smoking (a boolean ).
+a fire detection has an high temperature (a boolean).
+
+a fire is a business situation.
+
+]]></Bmd>
+    <Bmi><![CDATA[a room is initialized from a room event , where this room comes from the room number of this room event . ]]></Bmi>
+</BusinessModelDefinition>

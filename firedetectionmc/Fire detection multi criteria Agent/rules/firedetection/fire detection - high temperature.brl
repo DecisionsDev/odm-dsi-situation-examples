@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - high temperature</name>
+  <uuid>0fd3972e-fe7a-4080-8eb4-225998e9ee64</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a temperature event occurs 
+definitions
+	set 'the detection' to a fire detection where this fire detection is ongoing ;
+if the temperature of this temperature event is more than 200
+then
+	add heat to the criterias of 'the detection';
+else
+	remove heat from the criterias of 'the detection';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

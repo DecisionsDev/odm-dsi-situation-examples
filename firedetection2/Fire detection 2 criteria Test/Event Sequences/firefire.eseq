@@ -1,0 +1,20 @@
+define 'room' as a new room where 
+	the number is "102";
+
+emit a new smoke event where 
+	the room number is "102" , 
+	time-stamped 4/10/2018 11:00:00 AM +0200 ;
+	
+emit a new temperature event where 
+	the room number is "102" , 
+	the temperature is 210 ,
+	time-stamped 6 seconds later ;
+	
+emit a new smoke event where 
+	the room number is "102" , 
+	time-stamped 6 seconds later ;
+	
+emit a new temperature event where 
+	the room number is "102" , 
+	the temperature is 210 ,
+	time-stamped 6 seconds later ;

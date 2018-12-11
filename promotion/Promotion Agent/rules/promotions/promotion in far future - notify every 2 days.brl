@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion in far future - notify every 2 days</name>
+  <uuid>c0229c3e-20a8-4f48-825d-e8e942f01bc3</uuid>
+  <documentation><![CDATA[the goal is to emit an event every 2 days]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set situation to a promotion in far future 
+	where this promotion in far future is ongoing ;
+if the time of day of now is the time of day of the beginning date of situation
+and the day of week of now is one of { Monday , Wednesday , Friday } 
+then 
+	emit a new promotion in X days where 
+	the number of days is the duration between now and the promotion start date of situation in days ,
+	the region is the region of situation,
+	the store is 'the store' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

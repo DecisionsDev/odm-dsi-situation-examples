@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>RestartDetection</name>
+  <uuid>2302abd5-f1c7-4ee7-aaef-a20e19f86846</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a sensor heartbeat occurs 
+definitions 
+	set 'detection' to a missing sensor event detection 
+	where the beginning date of this missing sensor event detection is before the timestamp of this sensor heartbeat ;
+then
+	set the end date of detection to 1 day after now ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

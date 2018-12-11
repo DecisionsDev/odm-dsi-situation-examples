@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>InitFIreDetection</name>
+  <uuid>5440827c-f6b3-42cc-a5a6-7ffa64430d60</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a smoke event occurs 
+if there is no fire 
+then identify a new fire detection where 
+	the beginning date is this smoke event , 
+	the end date is 1 minute after this smoke event ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

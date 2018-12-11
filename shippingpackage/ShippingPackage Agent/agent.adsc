@@ -1,0 +1,4 @@
+'ShippingPackage_Agent' is an agent related to a package , 
+processing events :
+- package move  , where this package  comes from the id of this package move , with a horizon of 0 seconds
+- package delivered , where this package comes from the id of this package delivered , with a horizon of 0 seconds

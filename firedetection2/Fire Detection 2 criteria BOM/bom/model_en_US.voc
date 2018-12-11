@@ -1,0 +1,43 @@
+uuid = be4d9880-5884-46e9-a130-c2f293ae6c46
+# firedetection2.Fire
+firedetection2.Fire#concept.label = fire
+firedetection2.Fire.Fire(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {fire} where {0, beginning date} {1, end date} 
+
+# firedetection2.FireDetection
+firedetection2.FireDetection#concept.label = fire detection
+firedetection2.FireDetection.FireDetection(boolean,boolean,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {fire detection} where {0, high temperature} {1, smoking} {2, beginning date} {3, end date} 
+firedetection2.FireDetection.highTemperature#phrase.action = make it {high temperature} that {this} is high temperature
+firedetection2.FireDetection.highTemperature#phrase.navigation = {this} is high temperature
+firedetection2.FireDetection.smoking#phrase.action = make it {smoking} that {this} is smoking
+firedetection2.FireDetection.smoking#phrase.navigation = {this} is smoking
+
+# firedetection2.FireEvent
+firedetection2.FireEvent#concept.label = fire event
+firedetection2.FireEvent.FireEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {fire event} where {0, room number} {1, timestamp} 
+firedetection2.FireEvent.roomNumber#phrase.action = set the room number of {this} to {room number}
+firedetection2.FireEvent.roomNumber#phrase.navigation = {room number} of {this}
+firedetection2.FireEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+firedetection2.FireEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# firedetection2.Room
+firedetection2.Room#concept.label = room
+firedetection2.Room.Room(java.lang.String)#phrase.navigation = a new {room} where {0, number} 
+firedetection2.Room.number#phrase.navigation = {number} of {this}
+
+# firedetection2.RoomEvent
+firedetection2.RoomEvent#concept.label = room event
+firedetection2.RoomEvent.RoomEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {room event} where {0, room number} {1, timestamp} 
+firedetection2.RoomEvent.roomNumber#phrase.action = set the room number of {this} to {room number}
+firedetection2.RoomEvent.roomNumber#phrase.navigation = {room number} of {this}
+firedetection2.RoomEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+firedetection2.RoomEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# firedetection2.SmokeEvent
+firedetection2.SmokeEvent#concept.label = smoke event
+firedetection2.SmokeEvent.SmokeEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {smoke event} where {0, room number} {1, timestamp} 
+
+# firedetection2.TemperatureEvent
+firedetection2.TemperatureEvent#concept.label = temperature event
+firedetection2.TemperatureEvent.TemperatureEvent(int,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {temperature event} where {0, temperature} {1, room number} {2, timestamp} 
+firedetection2.TemperatureEvent.temperature#phrase.action = set the temperature of {this} to {temperature}
+firedetection2.TemperatureEvent.temperature#phrase.navigation = {temperature} of {this}

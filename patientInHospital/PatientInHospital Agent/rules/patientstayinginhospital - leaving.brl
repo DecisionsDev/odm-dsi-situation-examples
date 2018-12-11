@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>patientstayinginhospital - leaving</name>
+  <uuid>7c5da208-2326-4af4-bf11-0a3523cf3c89</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient release occurs 
+definitions
+  set 'situation' to a patient staying in hospital ;
+then
+  set the end date of situation to the timestamp of this patient release; 
+  end situation ; ]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

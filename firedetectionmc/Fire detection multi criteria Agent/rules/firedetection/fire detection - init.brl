@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - init</name>
+  <uuid>968fbf9c-1a60-4152-a39c-bcc55293927b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a direct detection event occurs 
+if there is no fire 
+then identify a new fire detection where 
+	the beginning date is this direct detection event  , 
+	the end date is 1 minute after this direct detection event ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

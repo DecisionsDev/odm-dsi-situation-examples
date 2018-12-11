@@ -1,0 +1,51 @@
+uuid = 8f963230-43ce-4a40-9f4a-b0145970ff6e
+# hospital.BusinessSituation
+hospital.BusinessSituation#concept.label = business situation
+hospital.BusinessSituation.BusinessSituation(java.time.ZonedDateTime)#phrase.navigation = a new {business situation} where {0, timestamp} 
+hospital.BusinessSituation.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+hospital.BusinessSituation.timestamp#phrase.navigation = {timestamp} of {this}
+
+# hospital.DailyNotification
+hospital.DailyNotification#concept.label = daily notification
+hospital.DailyNotification.DailyNotification(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {daily notification} where {0, ssn} {1, timestamp} 
+hospital.DailyNotification.ssn#phrase.action = set the ssn of {this} to {ssn}
+hospital.DailyNotification.ssn#phrase.navigation = {ssn} of {this}
+hospital.DailyNotification.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+hospital.DailyNotification.timestamp#phrase.navigation = {timestamp} of {this}
+
+# hospital.Patient
+hospital.Patient#concept.label = patient
+hospital.Patient.Patient(java.lang.String,java.lang.String)#phrase.navigation = a new {patient} where {0, name} {1, ssn} 
+hospital.Patient.name#phrase.action = set the name of {this} to {name}
+hospital.Patient.name#phrase.navigation = {name} of {this}
+hospital.Patient.ssn#phrase.navigation = {ssn} of {this}
+
+# hospital.PatientAdmission
+hospital.PatientAdmission#concept.label = patient admission
+hospital.PatientAdmission.PatientAdmission(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {patient admission} where {0, ssn} {1, timestamp} 
+hospital.PatientAdmission.ssn#phrase.action = set the ssn of {this} to {ssn}
+hospital.PatientAdmission.ssn#phrase.navigation = {ssn} of {this}
+hospital.PatientAdmission.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+hospital.PatientAdmission.timestamp#phrase.navigation = {timestamp} of {this}
+
+# hospital.PatientCreationEvent
+hospital.PatientCreationEvent#concept.label = patient creation event
+hospital.PatientCreationEvent.PatientCreationEvent(java.lang.String,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {patient creation event} where {0, name} {1, ssn} {2, timestamp} 
+hospital.PatientCreationEvent.name#phrase.action = set the name of {this} to {name}
+hospital.PatientCreationEvent.name#phrase.navigation = {name} of {this}
+hospital.PatientCreationEvent.ssn#phrase.action = set the ssn of {this} to {ssn}
+hospital.PatientCreationEvent.ssn#phrase.navigation = {ssn} of {this}
+hospital.PatientCreationEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+hospital.PatientCreationEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# hospital.PatientRelease
+hospital.PatientRelease#concept.label = patient release
+hospital.PatientRelease.PatientRelease(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {patient release} where {0, ssn} {1, timestamp} 
+hospital.PatientRelease.ssn#phrase.action = set the ssn of {this} to {ssn}
+hospital.PatientRelease.ssn#phrase.navigation = {ssn} of {this}
+hospital.PatientRelease.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+hospital.PatientRelease.timestamp#phrase.navigation = {timestamp} of {this}
+
+# hospital.PatientStayingInHospital
+hospital.PatientStayingInHospital#concept.label = patient staying in hospital
+hospital.PatientStayingInHospital.PatientStayingInHospital(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {patient staying in hospital} where {0, beginning date} {1, end date} 

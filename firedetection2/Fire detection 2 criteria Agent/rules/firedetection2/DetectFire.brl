@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>DetectFire</name>
+  <uuid>f364f4a9-0867-4af4-8a0d-9b5f72317802</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if there is at least one fire detection where this fire detection is ongoing 
+	and this fire detection is high temperature and this fire detection is smoking,
+then
+	identify a new fire where 
+	the beginning date is now;
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

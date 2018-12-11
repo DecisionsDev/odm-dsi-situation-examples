@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>NotifyBroken</name>
+  <uuid>92fa9629-b8e2-4348-be25-1118f1e68598</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'broken sensor' to a broken sensor 
+	where this broken sensor is ongoing;
+if the time of day of now is the time of day of the beginning date of 'broken sensor' 
+then
+  emit a new broken sensor event where 
+	the user is 'the user' , 
+	the message is "sensor broken since " + the beginning date of 'broken sensor' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

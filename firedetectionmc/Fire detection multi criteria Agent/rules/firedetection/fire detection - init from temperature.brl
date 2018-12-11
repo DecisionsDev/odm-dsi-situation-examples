@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire detection - init from temperature</name>
+  <uuid>64f770ff-a4a2-4723-84ad-1c9adfd80baf</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a temperature event occurs where the temperature of this temperature event is more than 200
+if there is no fire 
+then identify a new fire detection where 
+	the beginning date is this temperature event, 
+	the end date is 1 minute after this temperature event;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

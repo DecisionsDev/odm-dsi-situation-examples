@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion ongoing - notify end</name>
+  <uuid>c19b7aef-0bec-40a9-8947-a98e43ce0082</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set situation to a promotion ongoing 
+	where this promotion ongoing is ending;
+then 
+	emit a new promotion ends where
+	the store is 'the store',
+	the region is the region of situation;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

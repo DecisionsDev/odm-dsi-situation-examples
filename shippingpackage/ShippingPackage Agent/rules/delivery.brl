@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>delivery</name>
+  <uuid>de39b9f8-cec1-45cc-ac93-97a39e37d502</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a package delivered occurs 
+definitions 
+	set 'shipping' to a shipping package 
+	where this shipping package is ongoing;
+then
+    set the status of shipping to delivered ;
+	end shipping ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

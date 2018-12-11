@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>shipping</name>
+  <uuid>429fd829-a321-4ff4-8ab1-4cfde0c5e589</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a package move occurs 
+if 
+	there is no shipping package  
+	where this shipping package is ongoing , 
+then identify a new shipping package where 
+	the beginning date is now,
+	the end date is 3 days after now,
+	the status is ongoing,
+	the location is the location of this package move ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

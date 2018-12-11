@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion in near future - init</name>
+  <uuid>df834c6a-6eef-4687-9c80-2e141a95785d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'promotion planned' to a promotion in far future  
+	where this promotion in far future is ending ;
+then
+identify a new promotion in near future where 
+    the beginning date is now ,
+	the end date is the promotion start date of 'promotion planned' ,
+	the promotion end date is the promotion end date of 'promotion planned' ,
+	the region is the region of 'promotion planned' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

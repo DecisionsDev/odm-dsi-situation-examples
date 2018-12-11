@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: PatientInHospital.PatientInHospital_Agent
+Bundle-Version: 0.0.0
+

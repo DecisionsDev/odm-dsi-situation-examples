@@ -1,0 +1,12 @@
+define 'the store' as the store identified by "Toto";
+
+emit a new store init where 
+	the store is the store identified by "Toto",
+	time-stamped 4/10/2018 11:00:00 AM +0200 ;
+
+	
+emit a new new promotion where the store is 'the store',
+
+	the start date is 5/10/2018 08:00:00 AM +0200,
+	the end date is 5/15/2018 08:00:00 PM +0200,
+ time-stamped 2 seconds later ;  

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion ongoing - init</name>
+  <uuid>ad2246c0-6b82-4805-b968-3fb067163104</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'promotion in near future' to a promotion in near future 
+	where this promotion in near future is ending ;
+then
+identify a new promotion ongoing  where 
+    the beginning date is now ,
+	the end date is the promotion end date of  'promotion in near future' ,
+	the region is the region of 'promotion in near future' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

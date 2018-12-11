@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>patientstayinginhospital - arrival</name>
+  <uuid>9ca8325a-6d57-4f80-ba31-b45058f68aa2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient admission occurs 
+if there is no patient staying in hospital
+then 
+  identify a new patient staying in hospital 
+  where the beginning date is the timestamp of this patient admission;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

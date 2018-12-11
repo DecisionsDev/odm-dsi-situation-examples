@@ -1,0 +1,267 @@
+property uuid "2a4f6bff-8d23-45ae-b5ce-c821fc570413"
+property bdl_generated "true"
+package com.acme.store;
+
+
+public class CancelPromotion
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "CancelPromotion"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public string region
+                property "xsd.name" "region"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public CancelPromotion(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public CancelPromotion(string region, com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class NewPromotion
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "NewPromotion"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public java.time.ZonedDateTime endDate
+                property "xsd.name" "endDate"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string region
+                property "xsd.name" "region"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime startDate
+                property "xsd.name" "startDate"
+                property "xsd.optional" "true"
+                property "xsd.order" "2";
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "3"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "4";
+    public NewPromotion(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public NewPromotion(java.time.ZonedDateTime endDate, string region, java.time.ZonedDateTime startDate, com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionBegins
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PromotionBegins"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public string region
+                property "xsd.name" "region"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public PromotionBegins(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PromotionBegins(string region, com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionEnds
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PromotionEnds"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public string region
+                property "xsd.name" "region"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public PromotionEnds(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PromotionEnds(string region, com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionInFarFuture
+        extends com.acme.store.PromotionPlanned
+        property "de.generated" "true"
+{
+    public java.time.ZonedDateTime promotionStartDate
+                property update "true";
+    public PromotionInFarFuture(string region, java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public PromotionInFarFuture(java.time.ZonedDateTime promotionStartDate, java.time.ZonedDateTime promotionEndDate, string region, java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionInNearFuture
+        extends com.acme.store.PromotionPlanned
+        property "de.generated" "true"
+{
+    public PromotionInNearFuture(string region, java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public PromotionInNearFuture(java.time.ZonedDateTime promotionEndDate, string region, java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionInXDays
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PromotionInXDays"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public int numberOfDays
+                property "xsd.name" "numberOfDays"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string region
+                property "xsd.name" "region"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "2"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public PromotionInXDays(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PromotionInXDays(int numberOfDays, string region, com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionOngoing
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public string region
+                property "ia.situation.id" "true"
+                property update "true";
+    public PromotionOngoing(string region, java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public PromotionOngoing(string region, java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PromotionPlanned
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public java.time.ZonedDateTime promotionEndDate
+                property update "true";
+    public string region
+                property "ia.situation.id" "true"
+                property update "true";
+    public PromotionPlanned(string region, java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public PromotionPlanned(java.time.ZonedDateTime promotionEndDate, string region, java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Store
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.entityElementName" "Store"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public string name
+                property "ia.entity.id" "true"
+                property update "true"
+                property "xsd.name" "name"
+                property "xsd.order" "0";
+    public Store(string name)
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class StoreInit
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "StoreInit"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Promotion%20BOM/model"
+{
+    public com.acme.store.Store store
+                property "xsd.name" "store"
+                property "xsd.optional" "true"
+                property "xsd.order" "0"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public StoreInit(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public StoreInit(com.acme.store.Store store, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+

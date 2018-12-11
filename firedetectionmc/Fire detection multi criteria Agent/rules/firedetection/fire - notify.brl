@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire - notify</name>
+  <uuid>01705967-35c3-4d1e-b0b9-55a8f27fdcff</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'fire' to a fire where this fire is beginning;
+then
+    define 'fire event' as a new fire event where 
+	the room number is the number of 'the room';
+	set the criterias of 'fire event' to the criterias of 'fire';
+	emit 'fire event';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

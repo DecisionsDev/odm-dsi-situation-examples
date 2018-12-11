@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion in near future - notify daily</name>
+  <uuid>1cdad964-12ee-4dea-a997-89fb1be0455a</uuid>
+  <documentation><![CDATA[the goal is to emit an event every day]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set situation to a promotion in near future 
+	where this promotion in near future is ongoing ;
+if the time of day of now is the time of day of the beginning date of situation
+then 
+	emit a new promotion in X days where 
+	the number of days is the duration between now and the end date of situation in days ,
+	the region is the region of situation,
+	the store is 'the store' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a store is a business entity identified by a name.
+
+a store init is a business event related to a store.
+
+a new promotion is a business event.
+a new promotion is related to a store.
+a new promotion has a start date (date & time ).
+a new promotion has an end date (date & time ).
+a new promotion has a region.
+
+a cancel promotion is a business event.
+a cancel promotion is related to a store.
+a cancel promotion has a region.
+
+a promotion ongoing is a business situation identified by a region.
+
+a promotion planned is a business situation identified by a region.
+a promotion planned has a promotion end date (date & time).
+
+a promotion in far future is a promotion planned.
+a promotion in far future has a promotion start date (date & time).
+
+a promotion in near future is a promotion planned.
+
+a promotion in X days is a business event.
+a promotion in X days has a number of days (integer).
+a promotion in X days has a region.
+a promotion in X days is related to a store.
+
+a promotion begins is a business event.
+a promotion begins has a region.
+a promotion begins is related to a store.
+
+a promotion ends is a business event.
+a promotion ends has a region.
+a promotion ends is related to a store.
+]]></Bmd>
+    <Bmi><![CDATA[ a store is initialized from a store init , where this store comes from the store of this store init . ]]></Bmi>
+</BusinessModelDefinition>

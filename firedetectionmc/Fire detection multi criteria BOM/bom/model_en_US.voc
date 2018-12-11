@@ -1,0 +1,91 @@
+uuid = 133b3572-4b57-4c97-b1b9-ceffe5734eb5
+# firedetection.mc.CarbonDioxydeEvent
+firedetection.mc.CarbonDioxydeEvent#concept.label = carbon dioxyde event
+firedetection.mc.CarbonDioxydeEvent.CarbonDioxydeEvent(int,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {carbon dioxyde event} where {0, parts per million} {1, room number} {2, timestamp} 
+firedetection.mc.CarbonDioxydeEvent.partsPerMillion#phrase.action = set the parts per million of {this} to {parts per million}
+firedetection.mc.CarbonDioxydeEvent.partsPerMillion#phrase.navigation = {parts per million} of {this}
+
+# firedetection.mc.CarbonMonoxydeEvent
+firedetection.mc.CarbonMonoxydeEvent#concept.label = carbon monoxyde event
+firedetection.mc.CarbonMonoxydeEvent.CarbonMonoxydeEvent(int,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {carbon monoxyde event} where {0, parts per million} {1, room number} {2, timestamp} 
+firedetection.mc.CarbonMonoxydeEvent.partsPerMillion#phrase.action = set the parts per million of {this} to {parts per million}
+firedetection.mc.CarbonMonoxydeEvent.partsPerMillion#phrase.navigation = {parts per million} of {this}
+
+# firedetection.mc.Criteria
+firedetection.mc.Criteria#concept.label = criteria
+firedetection.mc.Criteria.CO#instance.label = CO
+firedetection.mc.Criteria.CO2#instance.label = CO2
+firedetection.mc.Criteria.flame#instance.label = flame
+firedetection.mc.Criteria.heat#instance.label = heat
+firedetection.mc.Criteria.heat_increase#instance.label = heat increase
+firedetection.mc.Criteria.smoke#instance.label = smoke
+
+# firedetection.mc.DirectDetectionEvent
+firedetection.mc.DirectDetectionEvent#concept.label = direct detection event
+firedetection.mc.DirectDetectionEvent.DirectDetectionEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {direct detection event} where {0, room number} {1, timestamp} 
+
+# firedetection.mc.Fire
+firedetection.mc.Fire#concept.label = fire
+firedetection.mc.Fire.Fire(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {fire} where {0, beginning date} {1, end date} 
+firedetection.mc.Fire.addTo_criterias(firedetection.mc.Criteria)#phrase.action = add {0} to the criterias of {this}
+firedetection.mc.Fire.clear_criterias()#phrase.action = clear the criterias of {this}
+firedetection.mc.Fire.criterias#phrase.action = set the criterias of {this} to {criteria}
+firedetection.mc.Fire.criterias#phrase.navigation = {criteria} of {this}
+firedetection.mc.Fire.removeFrom_criterias(firedetection.mc.Criteria)#phrase.action = remove {0} from the criterias of {this}
+
+# firedetection.mc.FireDetection
+firedetection.mc.FireDetection#concept.label = fire detection
+firedetection.mc.FireDetection.FireDetection(java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {fire detection} where {0, beginning date} {1, end date} 
+firedetection.mc.FireDetection.addTo_criterias(firedetection.mc.Criteria)#phrase.action = add {0} to the criterias of {this}
+firedetection.mc.FireDetection.clear_criterias()#phrase.action = clear the criterias of {this}
+firedetection.mc.FireDetection.criterias#phrase.action = set the criterias of {this} to {criteria}
+firedetection.mc.FireDetection.criterias#phrase.navigation = {criteria} of {this}
+firedetection.mc.FireDetection.removeFrom_criterias(firedetection.mc.Criteria)#phrase.action = remove {0} from the criterias of {this}
+
+# firedetection.mc.FireEvent
+firedetection.mc.FireEvent#concept.label = fire event
+firedetection.mc.FireEvent.FireEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {fire event} where {0, room number} {1, timestamp} 
+firedetection.mc.FireEvent.addTo_criterias(firedetection.mc.Criteria)#phrase.action = add {0} to the criterias of {this}
+firedetection.mc.FireEvent.clear_criterias()#phrase.action = clear the criterias of {this}
+firedetection.mc.FireEvent.criterias#phrase.action = set the criterias of {this} to {criteria}
+firedetection.mc.FireEvent.criterias#phrase.navigation = {criteria} of {this}
+firedetection.mc.FireEvent.removeFrom_criterias(firedetection.mc.Criteria)#phrase.action = remove {0} from the criterias of {this}
+firedetection.mc.FireEvent.roomNumber#phrase.action = set the room number of {this} to {room number}
+firedetection.mc.FireEvent.roomNumber#phrase.navigation = {room number} of {this}
+firedetection.mc.FireEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+firedetection.mc.FireEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# firedetection.mc.FlameEvent
+firedetection.mc.FlameEvent#concept.label = flame event
+firedetection.mc.FlameEvent.FlameEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {flame event} where {0, room number} {1, timestamp} 
+
+# firedetection.mc.HeatEvent
+firedetection.mc.HeatEvent#concept.label = heat event
+firedetection.mc.HeatEvent.HeatEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {heat event} where {0, room number} {1, timestamp} 
+
+# firedetection.mc.RORHeatEvent
+firedetection.mc.RORHeatEvent#concept.label = ROR heat event
+firedetection.mc.RORHeatEvent.RORHeatEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {ROR heat event} where {0, room number} {1, timestamp} 
+
+# firedetection.mc.Room
+firedetection.mc.Room#concept.label = room
+firedetection.mc.Room.Room(java.lang.String)#phrase.navigation = a new {room} where {0, number} 
+firedetection.mc.Room.number#phrase.navigation = {number} of {this}
+
+# firedetection.mc.RoomEvent
+firedetection.mc.RoomEvent#concept.label = room event
+firedetection.mc.RoomEvent.RoomEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {room event} where {0, room number} {1, timestamp} 
+firedetection.mc.RoomEvent.roomNumber#phrase.action = set the room number of {this} to {room number}
+firedetection.mc.RoomEvent.roomNumber#phrase.navigation = {room number} of {this}
+firedetection.mc.RoomEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+firedetection.mc.RoomEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# firedetection.mc.SmokeEvent
+firedetection.mc.SmokeEvent#concept.label = smoke event
+firedetection.mc.SmokeEvent.SmokeEvent(java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {smoke event} where {0, room number} {1, timestamp} 
+
+# firedetection.mc.TemperatureEvent
+firedetection.mc.TemperatureEvent#concept.label = temperature event
+firedetection.mc.TemperatureEvent.TemperatureEvent(int,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {temperature event} where {0, temperature} {1, room number} {2, timestamp} 
+firedetection.mc.TemperatureEvent.temperature#phrase.action = set the temperature of {this} to {temperature}
+firedetection.mc.TemperatureEvent.temperature#phrase.navigation = {temperature} of {this}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>fire - init</name>
+  <uuid>97566343-7763-4647-813a-3e5b58b90a18</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'the detection' to a fire detection where this fire detection is ongoing
+	and the number of elements in the criterias of this fire detection is at least 3;
+if there is no fire
+then
+    define 'fire' as a new fire where
+	the beginning date is now;
+	set the criterias of fire to the criterias of 'the detection';
+	identify fire ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

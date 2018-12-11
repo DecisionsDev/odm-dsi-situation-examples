@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>AbortDetection</name>
+  <uuid>2ee2bc50-7d24-4907-8152-f8c907f97623</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a stop sensor event occurs 
+definitions 
+  set 'detection' to a missing sensor event detection 
+	where this missing sensor event detection is ongoing;
+then
+	abort detection;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

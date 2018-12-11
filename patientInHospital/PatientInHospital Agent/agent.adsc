@@ -1,0 +1,5 @@
+'PatientInHospital_Agent' is an agent related to a patient  , 
+processing events :
+- patient creation event, where this patient comes from the ssn of this patient creation event , with a horizon of 0 seconds
+- patient admission, where this patient  comes from the ssn of this patient admission , with a horizon of 0 seconds 
+- patient release, where this patient comes from the ssn of this patient release , with a horizon of 0 seconds 

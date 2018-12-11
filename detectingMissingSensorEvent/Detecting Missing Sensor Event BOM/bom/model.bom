@@ -1,0 +1,185 @@
+property uuid "5fc53d51-48fd-4af2-9a9e-fc44095caaf9"
+property bdl_generated "true"
+package com.acme.missing;
+
+
+public class AbsenceOfSensorEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "AbsenceOfSensorEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public string message
+                property "xsd.name" "message"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public com.acme.missing.User user
+                property "xsd.name" "user"
+                property "xsd.optional" "true"
+                property "xsd.order" "2"
+                property "xsd.useMapping" "true";
+    public AbsenceOfSensorEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public AbsenceOfSensorEvent(string message, java.time.ZonedDateTime timestamp, com.acme.missing.User user)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class BrokenSensor
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public BrokenSensor(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public BrokenSensor(java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class BrokenSensorEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "BrokenSensorEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public string message
+                property "xsd.name" "message"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public com.acme.missing.User user
+                property "xsd.name" "user"
+                property "xsd.optional" "true"
+                property "xsd.order" "2"
+                property "xsd.useMapping" "true";
+    public BrokenSensorEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public BrokenSensorEvent(string message, java.time.ZonedDateTime timestamp, com.acme.missing.User user)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class MissingSensorEventDetection
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public MissingSensorEventDetection(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public MissingSensorEventDetection(java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class SensorHeartbeat
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "SensorHeartbeat"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "0";
+    public com.acme.missing.User user
+                property "xsd.name" "user"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public SensorHeartbeat(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public SensorHeartbeat(java.time.ZonedDateTime timestamp, com.acme.missing.User user)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class StopSensorEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "StopSensorEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "0";
+    public com.acme.missing.User user
+                property "xsd.name" "user"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public StopSensorEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public StopSensorEvent(java.time.ZonedDateTime timestamp, com.acme.missing.User user)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class User
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.entityElementName" "User"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public string email
+                property "ia.entity.id" "true"
+                property update "true"
+                property "xsd.name" "email"
+                property "xsd.order" "0";
+    public User(string email)
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class UserInit
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "UserInit"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/Detecting%20Missing%20Sensor%20Event%20BOM/model"
+{
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "0";
+    public com.acme.missing.User user
+                property "xsd.name" "user"
+                property "xsd.optional" "true"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public UserInit(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public UserInit(java.time.ZonedDateTime timestamp, com.acme.missing.User user)
+                property groups "BALA"
+                property prototype "true";
+}
+

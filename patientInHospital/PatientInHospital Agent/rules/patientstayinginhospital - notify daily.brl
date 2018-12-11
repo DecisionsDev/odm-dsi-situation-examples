@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>patientstayinginhospital - notify daily</name>
+  <uuid>6966f9f4-9c5c-4c45-9fd4-3847605334d7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set situation to a patient staying in hospital 
+    where this patient staying in hospital is ongoing ;
+if now is after the beginning date of situation 
+and the time of day of now is the time of day of the beginning date of situation
+then 
+	define 'duration' as the duration between the beginning date of situation and now;
+	emit a new daily notification where 
+	the ssn is the ssn of 'the patient';
+	print "patient " + the name of 'the patient' + " in hospital for " + 'duration';]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

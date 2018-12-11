@@ -1,0 +1,156 @@
+property uuid "1128a390-60d6-4728-b91d-658120232173"
+property bdl_generated "true"
+package hospital;
+
+
+public class BusinessSituation
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "BusinessSituation"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/PatientInHospital%20BOM/model"
+{
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "0";
+    public BusinessSituation(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class DailyNotification
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "DailyNotification"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/PatientInHospital%20BOM/model"
+{
+    public string ssn
+                property "xsd.name" "ssn"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public DailyNotification(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public DailyNotification(string ssn, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Patient
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string name
+                property update "true";
+    public string ssn
+                property "ia.entity.id" "true"
+                property update "true";
+    public Patient(string ssn)
+                property "dataio.default" "true";
+    public Patient(string name, string ssn)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientAdmission
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PatientAdmission"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/PatientInHospital%20BOM/model"
+{
+    public string ssn
+                property "xsd.name" "ssn"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public PatientAdmission(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PatientAdmission(string ssn, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientCreationEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PatientCreationEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/PatientInHospital%20BOM/model"
+{
+    public string name
+                property "xsd.name" "name"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string ssn
+                property "xsd.name" "ssn"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public PatientCreationEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PatientCreationEvent(string name, string ssn, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientRelease
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PatientRelease"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/PatientInHospital%20BOM/model"
+{
+    public string ssn
+                property "xsd.name" "ssn"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public PatientRelease(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PatientRelease(string ssn, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientStayingInHospital
+        implements com.ibm.ia.model.Situation
+        property "de.generated" "true"
+{
+    public PatientStayingInHospital(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public PatientStayingInHospital(java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+

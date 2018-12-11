@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>BeginBroken</name>
+  <uuid>5401cee6-6839-45ba-8c8e-73388f4a0175</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set 'detection' to a missing sensor event detection 
+	where this missing sensor event detection is ending;
+then
+    identify a new broken sensor where 
+	the beginning date is now;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

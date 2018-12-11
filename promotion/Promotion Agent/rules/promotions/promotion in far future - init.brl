@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>promotion in far future - init</name>
+  <uuid>4ebf1586-f82a-4034-8f77-808804273b84</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a new promotion occurs
+if
+    there is no promotion in far future
+    where this promotion in far future is ongoing
+    and the region of this promotion in far future is the region of this new promotion ,
+    and now is before 10 days before the start date of this new promotion 
+then 
+    define 'situation' as a new promotion in far future where 
+       the beginning date is now,
+       the end date is 10 days before the start date of this new promotion ,
+       the region is the region of this new promotion;
+    set the promotion end date of situation to the end date of this new promotion ;
+    set the promotion start date of situation to the start date of this new promotion ;
+    identify situation ;
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

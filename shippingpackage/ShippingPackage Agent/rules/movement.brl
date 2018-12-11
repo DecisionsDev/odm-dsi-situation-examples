@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>movement</name>
+  <uuid>35981730-96a1-4b65-9ebe-0e44659976d2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a package move occurs 
+definitions
+  set 'shipping' to a shipping package 
+	where this shipping package is ongoing;
+then 
+  set the location of shipping to the location of this package move ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

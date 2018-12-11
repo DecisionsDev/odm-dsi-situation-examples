@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>EndBrokenOnStopSensor</name>
+  <uuid>0fd092ff-2fae-47bb-89ca-f01f496604a3</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a stop sensor event occurs 
+definitions 
+  set 'broken sensor' to a broken sensor  
+	where this broken sensor is ongoing;
+then
+	abort 'broken sensor' ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

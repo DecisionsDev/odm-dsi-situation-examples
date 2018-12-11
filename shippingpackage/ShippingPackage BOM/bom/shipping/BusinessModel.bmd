@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a package is a business entity identified by an id.
+
+
+a delivery status can be one of : 
+	 ongoing,
+	 delivered.
+	 
+a shipping package is a business situation.
+a shipping package has a location (a point) used as the default geometry.
+a shipping package has a status (a delivery status).
+
+
+a package move is a business event with an id (a string) and a location (a point).
+
+a package delivered is a business event with an id (a string).
+
+a timeout shipment is a business event with an id (a string), a location (a point) and a duration (an absolute duration ).
+
+an outgoing package delivery event is a business event 
+with an id (a string) and a duration (an absolute duration ).]]></Bmd>
+</BusinessModelDefinition>

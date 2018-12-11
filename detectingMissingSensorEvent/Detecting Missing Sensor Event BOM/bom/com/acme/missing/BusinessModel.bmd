@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[a user is a business entity identified by an email.
+
+a user init is a business event related to a user.
+
+a sensor heartbeat is a business event related to a user.
+
+a stop sensor event is a business event related to an user.
+
+a missing sensor event detection is a business situation.
+a broken sensor is a business situation.
+
+an absence of sensor event is a business event related to a user.
+an absence of sensor event has a message.
+
+a broken sensor event is a business event related to an user .
+a broken sensor event has a message.
+
+ 
+]]></Bmd>
+    <Bmi><![CDATA[an user is initialized from an user init , where this user comes from the user of this user init . ]]></Bmi>
+</BusinessModelDefinition>

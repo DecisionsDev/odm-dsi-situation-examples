@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: Fire_detection_multi_criteria.Fire_detection_mult
+ i_criteria_Agent
+Bundle-Version: 0.0.0
+

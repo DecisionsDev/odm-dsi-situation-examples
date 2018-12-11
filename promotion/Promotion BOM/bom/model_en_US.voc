@@ -1,0 +1,99 @@
+uuid = b366c994-a9db-41af-a029-95998f16d67e
+# com.acme.store.CancelPromotion
+com.acme.store.CancelPromotion#concept.label = cancel promotion
+com.acme.store.CancelPromotion.CancelPromotion(java.lang.String,com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {cancel promotion} where {0, region} {1, store} {2, timestamp} 
+com.acme.store.CancelPromotion.region#phrase.action = set the region of {this} to {region}
+com.acme.store.CancelPromotion.region#phrase.navigation = {region} of {this}
+com.acme.store.CancelPromotion.store#phrase.action = set the store of {this} to {store}
+com.acme.store.CancelPromotion.store#phrase.clearer = clear the store of {this}
+com.acme.store.CancelPromotion.store#phrase.navigation = {store} of {this}
+com.acme.store.CancelPromotion.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.CancelPromotion.timestamp#phrase.navigation = {timestamp} of {this}
+
+# com.acme.store.NewPromotion
+com.acme.store.NewPromotion#concept.label = new promotion
+com.acme.store.NewPromotion.NewPromotion(java.time.ZonedDateTime,java.lang.String,java.time.ZonedDateTime,com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {new promotion} where {0, end date} {1, region} {2, start date} {3, store} {4, timestamp} 
+com.acme.store.NewPromotion.endDate#phrase.action = set the end date of {this} to {end date}
+com.acme.store.NewPromotion.endDate#phrase.navigation = {end date} of {this}
+com.acme.store.NewPromotion.region#phrase.action = set the region of {this} to {region}
+com.acme.store.NewPromotion.region#phrase.navigation = {region} of {this}
+com.acme.store.NewPromotion.startDate#phrase.action = set the start date of {this} to {start date}
+com.acme.store.NewPromotion.startDate#phrase.navigation = {start date} of {this}
+com.acme.store.NewPromotion.store#phrase.action = set the store of {this} to {store}
+com.acme.store.NewPromotion.store#phrase.clearer = clear the store of {this}
+com.acme.store.NewPromotion.store#phrase.navigation = {store} of {this}
+com.acme.store.NewPromotion.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.NewPromotion.timestamp#phrase.navigation = {timestamp} of {this}
+
+# com.acme.store.PromotionBegins
+com.acme.store.PromotionBegins#concept.label = promotion begins
+com.acme.store.PromotionBegins.PromotionBegins(java.lang.String,com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {promotion begins} where {0, region} {1, store} {2, timestamp} 
+com.acme.store.PromotionBegins.region#phrase.action = set the region of {this} to {region}
+com.acme.store.PromotionBegins.region#phrase.navigation = {region} of {this}
+com.acme.store.PromotionBegins.store#phrase.action = set the store of {this} to {store}
+com.acme.store.PromotionBegins.store#phrase.clearer = clear the store of {this}
+com.acme.store.PromotionBegins.store#phrase.navigation = {store} of {this}
+com.acme.store.PromotionBegins.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.PromotionBegins.timestamp#phrase.navigation = {timestamp} of {this}
+
+# com.acme.store.PromotionEnds
+com.acme.store.PromotionEnds#concept.label = promotion ends
+com.acme.store.PromotionEnds.PromotionEnds(java.lang.String,com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {promotion ends} where {0, region} {1, store} {2, timestamp} 
+com.acme.store.PromotionEnds.region#phrase.action = set the region of {this} to {region}
+com.acme.store.PromotionEnds.region#phrase.navigation = {region} of {this}
+com.acme.store.PromotionEnds.store#phrase.action = set the store of {this} to {store}
+com.acme.store.PromotionEnds.store#phrase.clearer = clear the store of {this}
+com.acme.store.PromotionEnds.store#phrase.navigation = {store} of {this}
+com.acme.store.PromotionEnds.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.PromotionEnds.timestamp#phrase.navigation = {timestamp} of {this}
+
+# com.acme.store.PromotionInFarFuture
+com.acme.store.PromotionInFarFuture#concept.label = promotion in far future
+com.acme.store.PromotionInFarFuture.PromotionInFarFuture(java.time.ZonedDateTime,java.time.ZonedDateTime,java.lang.String,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {promotion in far future} where {0, promotion start date} {1, promotion end date} {2, region} {3, beginning date} {4, end date} 
+com.acme.store.PromotionInFarFuture.promotionStartDate#phrase.action = set the promotion start date of {this} to {promotion start date}
+com.acme.store.PromotionInFarFuture.promotionStartDate#phrase.navigation = {promotion start date} of {this}
+
+# com.acme.store.PromotionInNearFuture
+com.acme.store.PromotionInNearFuture#concept.label = promotion in near future
+com.acme.store.PromotionInNearFuture.PromotionInNearFuture(java.time.ZonedDateTime,java.lang.String,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {promotion in near future} where {0, promotion end date} {1, region} {2, beginning date} {3, end date} 
+
+# com.acme.store.PromotionInXDays
+com.acme.store.PromotionInXDays#concept.label = promotion in X days
+com.acme.store.PromotionInXDays.PromotionInXDays(int,java.lang.String,com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {promotion in X days} where {0, number of days} {1, region} {2, store} {3, timestamp} 
+com.acme.store.PromotionInXDays.numberOfDays#phrase.action = set the number of days of {this} to {number of days}
+com.acme.store.PromotionInXDays.numberOfDays#phrase.navigation = {number of days} of {this}
+com.acme.store.PromotionInXDays.region#phrase.action = set the region of {this} to {region}
+com.acme.store.PromotionInXDays.region#phrase.navigation = {region} of {this}
+com.acme.store.PromotionInXDays.store#phrase.action = set the store of {this} to {store}
+com.acme.store.PromotionInXDays.store#phrase.clearer = clear the store of {this}
+com.acme.store.PromotionInXDays.store#phrase.navigation = {store} of {this}
+com.acme.store.PromotionInXDays.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.PromotionInXDays.timestamp#phrase.navigation = {timestamp} of {this}
+
+# com.acme.store.PromotionOngoing
+com.acme.store.PromotionOngoing#concept.label = promotion ongoing
+com.acme.store.PromotionOngoing.PromotionOngoing(java.lang.String,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {promotion ongoing} where {0, region} {1, beginning date} {2, end date} 
+com.acme.store.PromotionOngoing.region#phrase.action = set the region of {this} to {region}
+com.acme.store.PromotionOngoing.region#phrase.navigation = {region} of {this}
+
+# com.acme.store.PromotionPlanned
+com.acme.store.PromotionPlanned#concept.label = promotion planned
+com.acme.store.PromotionPlanned.PromotionPlanned(java.time.ZonedDateTime,java.lang.String,java.time.ZonedDateTime,java.time.ZonedDateTime)#phrase.navigation = a new {promotion planned} where {0, promotion end date} {1, region} {2, beginning date} {3, end date} 
+com.acme.store.PromotionPlanned.promotionEndDate#phrase.action = set the promotion end date of {this} to {promotion end date}
+com.acme.store.PromotionPlanned.promotionEndDate#phrase.navigation = {promotion end date} of {this}
+com.acme.store.PromotionPlanned.region#phrase.action = set the region of {this} to {region}
+com.acme.store.PromotionPlanned.region#phrase.navigation = {region} of {this}
+
+# com.acme.store.Store
+com.acme.store.Store#concept.label = store
+com.acme.store.Store.Store(java.lang.String)#phrase.navigation = a new {store} where {0, name} 
+com.acme.store.Store.name#phrase.navigation = {name} of {this}
+
+# com.acme.store.StoreInit
+com.acme.store.StoreInit#concept.label = store init
+com.acme.store.StoreInit.StoreInit(com.acme.store.Store,java.time.ZonedDateTime)#phrase.navigation = a new {store init} where {0, store} {1, timestamp} 
+com.acme.store.StoreInit.store#phrase.action = set the store of {this} to {store}
+com.acme.store.StoreInit.store#phrase.clearer = clear the store of {this}
+com.acme.store.StoreInit.store#phrase.navigation = {store} of {this}
+com.acme.store.StoreInit.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+com.acme.store.StoreInit.timestamp#phrase.navigation = {timestamp} of {this}

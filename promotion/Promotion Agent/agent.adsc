@@ -1,0 +1,4 @@
+'PromoAgent' is an agent related to a store  , 
+processing events :
+- new promotion  , where this store  comes from the store of this new promotion , with a horizon of 0 seconds
+- cancel promotion , where this store comes from the store of this cancel promotion , with a horizon of 0 seconds

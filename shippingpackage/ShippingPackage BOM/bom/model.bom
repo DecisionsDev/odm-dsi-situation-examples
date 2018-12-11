@@ -1,0 +1,159 @@
+property uuid "0513cc26-a2b0-4456-a16e-78ff2d0b4866"
+property bdl_generated "true"
+package shipping;
+
+
+public class DeliveryStatus
+        property "de.generated" "true"
+        property "ia.enum" "true"
+{
+    domain {static ongoing, static delivered}
+    public static final readonly shipping.DeliveryStatus delivered;
+    public static final readonly shipping.DeliveryStatus ongoing;
+}
+
+public class OutgoingPackageDeliveryEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "OutgoingPackageDeliveryEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/ShippingPackage%20BOM/model"
+{
+    public java.time.Duration duration
+                property "xsd.name" "duration"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string id
+                property "xsd.name" "id"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public OutgoingPackageDeliveryEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public OutgoingPackageDeliveryEvent(java.time.Duration duration, string id, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Package
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string id
+                property "ia.entity.id" "true"
+                property update "true";
+    public Package(string id)
+                property "dataio.default" "true"
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PackageDelivered
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PackageDelivered"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/ShippingPackage%20BOM/model"
+{
+    public string id
+                property "xsd.name" "id"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public PackageDelivered(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PackageDelivered(string id, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PackageMove
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" "xmlns:geom=\"http://www.ibm.com/geolib/geom\" "
+        property "xsd.eventElementName" "PackageMove"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/ShippingPackage%20BOM/model"
+{
+    public string id
+                property "xsd.name" "id"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public com.ibm.geolib.geom.Point location
+                property "xsd.name" "location"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public PackageMove(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PackageMove(string id, com.ibm.geolib.geom.Point location, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class ShippingPackage
+        implements com.ibm.ia.model.Situation
+        property "brl.facets" "com.ibm.geolib.geom.Geometry:location"
+        property "de.generated" "true"
+{
+    public com.ibm.geolib.geom.Point location
+                property update "true";
+    public shipping.DeliveryStatus status
+                property update "true";
+    public ShippingPackage(java.time.ZonedDateTime beginningDate)
+                property "dataio.default" "true";
+    public ShippingPackage(com.ibm.geolib.geom.Point location, shipping.DeliveryStatus status, java.time.ZonedDateTime beginningDate, java.time.ZonedDateTime endDate)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class TimeoutShipment
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" "xmlns:geom=\"http://www.ibm.com/geolib/geom\" "
+        property "xsd.eventElementName" "TimeoutShipment"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/ShippingPackage%20BOM/model"
+{
+    public java.time.Duration duration
+                property "xsd.name" "duration"
+                property "xsd.optional" "true"
+                property "xsd.order" "0";
+    public string id
+                property "xsd.name" "id"
+                property "xsd.optional" "true"
+                property "xsd.order" "1";
+    public com.ibm.geolib.geom.Point location
+                property "xsd.name" "location"
+                property "xsd.optional" "true"
+                property "xsd.order" "2";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public TimeoutShipment(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public TimeoutShipment(java.time.Duration duration, string id, com.ibm.geolib.geom.Point location, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
