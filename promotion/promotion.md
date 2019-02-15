@@ -33,6 +33,7 @@ Two other rules are for the business situations that occur later.
 
 
 ```BERL
+when a new promotion occurs
 if
     there is no promotion in far future
     where this promotion in far future is ongoing
